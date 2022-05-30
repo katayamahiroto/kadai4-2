@@ -42,10 +42,10 @@
         scene.add(directionalLight2);
 
         // helper
-        const gridHelper = new THREE.GridHelper(2,10); // size, step
+        /*const gridHelper = new THREE.GridHelper(2,10); // size, step
         scene.add(gridHelper);
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
-        scene.add(axisHelper);
+        scene.add(axisHelper);*/
 
         // テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
@@ -61,6 +61,7 @@
         box.position.set(-1.5,0,0); //位置を指定
         scene.add(box); */  // シーンに追加
         
+        //角柱を作成
         var geometry = new THREE.TorusGeometry( 0.5, 0.2, 6, 12 );
         var torus = new THREE.Mesh( geometry, mat );
         torus.position.set(-1.5,0,0);
