@@ -54,12 +54,17 @@
         mat.map = texture;
 
         // 箱を作成
-        var geometry1 = new THREE.BoxGeometry(0.8, 0.8, 0.8);
+        /*var geometry1 = new THREE.BoxGeometry(0.8, 0.8, 0.8);
         //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
         //var box = new THREE.Mesh(geometry, material);
         var box = new THREE.Mesh(geometry1, mat);
         box.position.set(-1.5,0,0); //位置を指定
-        scene.add(box);   // シーンに追加
+        scene.add(box); */  // シーンに追加
+        
+        var geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
+        var torus = new THREE.Mesh( geometry, mat );
+        torus.position.set(-1.5,0,0);
+        scene.add( torus );
 
         // 球を作成
         var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 ); ;
